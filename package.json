@@ -1,5 +1,5 @@
 {
-  "name": "hadiys-online-cv",
+  "name": "resume-online",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -7,7 +7,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/public",
+    "deploy": "gh-pages -d dist/public -f",
     "preview": "vite preview --host",
     "format": "prettier --write ."
   },

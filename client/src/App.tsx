@@ -56,7 +56,7 @@ export default function App() {
                 {/* Nav Links - Centered, Uppercase, hover-only styles */}
                 <nav className="flex items-center gap-1 sm:gap-2">
                   {(["home", "portfolio", "blog", "contact"] as const).map((sec) => {
-                    const label = sec === "home" ? "HOME (CV)" : sec.toUpperCase();
+                    const label = sec === "home" ? "HOME" : sec.toUpperCase();
                     const isActive = activeSection === sec;
                     return (
                       <button

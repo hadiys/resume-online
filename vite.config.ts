@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   // Set this to your repository name (e.g., '/hadi-portfolio/')
   // If you use a custom domain, set this to '/'
-  base: "/hadiys-online-cv/", 
+  base: "/resume-online/", 
   
   plugins: [
     react(), 

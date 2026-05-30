@@ -24,21 +24,21 @@ export default function Home() {
           </div>
 
           <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-serif italic max-w-2xl">
-            "{personal.punchyOneLiner}"
+            {personal.punchyOneLiner}
           </p>
 
           {/* Company Logos & Platforms (Meta, TikTok) */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 pt-4 opacity-75">
             <div className="flex items-center gap-3">
               <img 
-                src="/images/meta.png" 
+                src="images/meta.png" 
                 alt="Meta Logo" 
                 className="h-6 md:h-8 object-contain"
               />
             </div>
             <div className="flex items-center gap-3">
               <img 
-                src="/images/tiktok.png" 
+                src="images/tiktok.png" 
                 alt="TikTok Logo" 
                 className="h-6 md:h-8 object-contain"
               />

@@ -54,12 +54,13 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Hadi Yaser",
     title: "Risk & Integrity Analyst",
-    photoUrl: "/images/profile_photo.jpeg",
-    bgUrl: "/images/dubai.webp",
+    photoUrl: "images/hadi_profile.jpeg",
+    // photoUrl: "images/profile_photo.jpeg",
+    bgUrl: "images/dubai.webp",
     email: "saleh.hadiyasser@hotmail.com",
     phone: "+353 879 565 424",
     location: "Dublin, IE (Currently searching for UAE-based roles)",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://linkedin.com/in/hadiys",
     profileSummary: "Results-driven Risk & Integrity Analyst with 5 years' experience in Platform Safety & Integrity Operations at Meta and TikTok. Proven track record in designing AI-powered automation pipelines that reduce manual effort by up to 85%, leading cross-regional fraud investigations uncovering systemic enforcement gaps, and delivering data-driven solutions at scale. Combines postgraduate computing education with IBM-certified data engineering expertise to translate complex integrity challenges into automated, scalable enforcement systems. Strong command of Python, SQL, and agentic AI workflows.",
     punchyOneLiner: "Translating complex integrity challenges into automated, scalable enforcement systems."
   },
@@ -67,16 +68,16 @@ export const portfolioData: PortfolioData = {
     {
       category: "Languages",
       items: [
-        { name: "Python", icon: "/images/python.png" },
-        { name: "SQL", icon: "/images/sql.png" }
+        { name: "Python", icon: "images/python.png" },
+        { name: "SQL", icon: "images/sql.png" }
       ]
     },
     {
       category: "Tools & Technologies",
       items: [
-        { name: "Snowflake", icon: "/images/snowflake.png" },
-        { name: "dbt", icon: "/images/dbt.webp" },
-        { name: "Apache Airflow", icon: "/images/airflow.png" }
+        { name: "Snowflake", icon: "images/snowflake.png" },
+        { name: "dbt", icon: "images/dbt.webp" },
+        { name: "Apache Airflow", icon: "images/airflow.png" }
       ]
     }
   ],
