@@ -1,0 +1,8 @@
+*.md
+/node_modules
+/dist
+.env
+__manus__
+.manus
+.DS_Store
+/.DS_Store
