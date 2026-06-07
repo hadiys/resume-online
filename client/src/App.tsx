@@ -8,12 +8,18 @@ import PortfolioPage from "./pages/PortfolioPage";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import { getPortfolioData } from "./data/portfolioData";
+import NotFound from "./pages/NotFound";
 
 type Section = "home" | "portfolio" | "blog" | "contact";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<Section>("home");
-  const [portfolioData] = useState(() => getPortfolioData())
+  const [portfolioData] = useState(() => getPortfolioData());
+  
+  if (!portfolioData) {
+    return <NotFound />;
+  }
+
   const { personal } = portfolioData;
 
   const renderSection = () => {

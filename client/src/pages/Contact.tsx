@@ -32,7 +32,7 @@ export default function Contact({ data }: ContactProps) {
           Get in Touch
         </h2>
         <p className="text-zinc-400 max-w-2xl text-base leading-relaxed">
-          Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below.
+          {personal.contactPrompt}
         </p>
       </div>
 
@@ -76,7 +76,7 @@ export default function Contact({ data }: ContactProps) {
                 LinkedIn
               </a>
               <a 
-                href="https://github.com"
+                href="https://github.com/hadiys"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 transition-all font-sans text-xs font-semibold"

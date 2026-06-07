@@ -42,6 +42,7 @@ export interface PortfolioData {
     linkedin: string;
     profileSummary: string;
     punchyOneLiner: string;
+    contactPrompt: string;
   };
   skills: {
     category: string;
@@ -64,7 +65,8 @@ export const riskAnalystData: PortfolioData = {
     location: "Dublin, IE (Currently searching for UAE-based roles)",
     linkedin: "https://linkedin.com/in/hadiys",
     profileSummary: "Results-driven Risk & Integrity Analyst with 5 years' experience in Platform Safety & Integrity Operations at Meta and TikTok. Proven track record in designing AI-powered automation pipelines that reduce manual effort by up to 85%, leading cross-regional fraud investigations uncovering systemic enforcement gaps, and delivering data-driven solutions at scale. Combines postgraduate computing education with IBM-certified data engineering expertise to translate complex integrity challenges into automated, scalable enforcement systems. Strong command of Python, SQL, and agentic AI workflows.",
-    punchyOneLiner: "Translating complex integrity challenges into automated, scalable enforcement systems."
+    punchyOneLiner: "Translating complex integrity challenges into automated, scalable enforcement systems.",
+    contactPrompt: "Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below."
   },
   skills: [
     {
@@ -180,7 +182,8 @@ export const dataAnalystData: PortfolioData = {
     location: "Dublin, IE (Currently searching for UAE-based roles)",
     linkedin: "https://linkedin.com/in/hadiys",
     profileSummary: "Data-driven Analyst with 5 years' experience delivering BI dashboards, operational reporting, and analytics solutions across large-scale business environments. Proven ability to rapidly develop domain expertise, integrate complex data from multiple sources, and deliver reliable reporting aligned with strategic objectives. Skilled in end-to-end data pipelines (Python, SQL), cloud data warehousing (Snowflake), and interactive dashboard development (Tableau), with IBM Data Engineering Certification. Experienced in cross-functional requirements gathering, project planning, and presenting actionable insights to senior stakeholders",
-    punchyOneLiner: "Translating operational challenges into data-driven solutions."
+    punchyOneLiner: "Translating operational challenges into data-driven solutions.",
+    contactPrompt: "Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below."
   },
   skills: [
     {
@@ -254,18 +257,21 @@ export const dataAnalystData: PortfolioData = {
       name: "Data Engineer Professional Certificate",
       issuer: "IBM",
       date: "Oct 2025",
-      url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
+      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/R95BGQP18895"
     }
   ]
 };
 
-export function getPortfolioData(): PortfolioData {
+export function getPortfolioData(): PortfolioData | null {
     if (typeof window !== "undefined") {
         const params = new window.URLSearchParams(window.location.search);
         const role = params.get("role");
         if (role === "14165") {
             return dataAnalystData
         }
+        else if (role === "13205") {
+            return riskAnalystData
+        }
     }
-    return riskAnalystData;
+    return null;
 }
