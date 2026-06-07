@@ -1,3 +1,5 @@
+import { URLSearchParams } from "url";
+
 export interface Project {
   id: string;
   title: string;
@@ -50,7 +52,7 @@ export interface PortfolioData {
   certifications: Certification[];
 }
 
-export const portfolioData: PortfolioData = {
+export const riskAnalystData: PortfolioData = {
   personal: {
     name: "Hadi Yaser",
     title: "Risk & Integrity Analyst",
@@ -144,8 +146,8 @@ export const portfolioData: PortfolioData = {
       title: "Retail Analytics Data Warehouse",
       subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
       period: "Oct 2024",
-      githubUrl: "https://github.com",
-      demoUrl: "https://towardsdev.com",
+      githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
+      demoUrl: "https://towardsdev.comhttps://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
       tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
       summary: "Designed and built a data warehouse in Snowflake to transform complex time-series, geographic, and demographic data into high-performance analytical datasets, using advanced data modelling and ETL with Python, dbt, and SQL queries.",
       bullets: [
@@ -165,3 +167,105 @@ export const portfolioData: PortfolioData = {
     }
   ]
 };
+
+export const dataAnalystData: PortfolioData = {
+  personal: {
+    name: "Hadi Yaser",
+    title: "Risk & Integrity Analyst",
+    photoUrl: "images/hadi_profile.jpeg",
+    // photoUrl: "images/profile_photo.jpeg",
+    bgUrl: "images/dubai.webp",
+    email: "saleh.hadiyasser@hotmail.com",
+    phone: "+353 879 565 424",
+    location: "Dublin, IE (Currently searching for UAE-based roles)",
+    linkedin: "https://linkedin.com/in/hadiys",
+    profileSummary: "Data-driven Analyst with 5 years' experience delivering BI dashboards, operational reporting, and analytics solutions across large-scale business environments. Proven ability to rapidly develop domain expertise, integrate complex data from multiple sources, and deliver reliable reporting aligned with strategic objectives. Skilled in end-to-end data pipelines (Python, SQL), cloud data warehousing (Snowflake), and interactive dashboard development (Tableau), with IBM Data Engineering Certification. Experienced in cross-functional requirements gathering, project planning, and presenting actionable insights to senior stakeholders",
+    punchyOneLiner: "Translating operational challenges into data-driven solutions."
+  },
+  skills: [
+    {
+      category: "Languages",
+      items: [
+        { name: "Python", icon: "images/python.png" },
+        { name: "SQL", icon: "images/sql.png" }
+      ]
+    },
+    {
+      category: "Tools & Technologies",
+      items: [
+        { name: "Snowflake", icon: "images/snowflake.png" },
+        { name: "dbt", icon: "images/dbt.webp" },
+        { name: "Apache Airflow", icon: "images/airflow.png" }
+      ]
+    }
+  ],
+  experiences: [
+    {
+      id: "exp-1",
+      role: "Risk & Integrity Analyst (Gulf Market)",
+      company: "Meta",
+      location: "Dublin, IE",
+      period: "Nov 2025 – Present",
+      description: [
+        "Collaborated as part of a technical analytics team to validate data accuracy and develop a unified BI Dashboard that automatically generates coherent performance narratives around service delivery metrics for the AMET (Africa, Middle East, Turkey) region in liaison with operations leadership.",
+        "Designed and deployed 3 automated analytics solutions for business-critical use-cases (regional conflict monitoring, team demand & SLA tracking, regulatory escalation trend analysis), enabling self-serve insight generation and saving 2-4 manual hours per week.",
+        "Owned the end-to-end creation and delivery of business performance reporting across MENAT markets  (Middle East, North Africa, Turkey), tracking, analysing and presenting 8+ KPIs to senior leadership in preparation for org-level presentations.",
+        "Responded to ad-hoc reporting requirements from the MENAT operations team to perform deep-dive investigations on organic and paid content across Facebook & Instagram, responding to risk-based demand with tailored data and insights."
+      ],
+      skills: ["Python", "SQL", "Data Warehouses", "Automation", "BI Dashboards", "Project Management"]
+    },
+    {
+      id: "exp-2",
+      role: "Project Manager & Senior QA Analyst",
+      company: "TikTok",
+      location: "Dublin, IE",
+      period: "May 2021 – May 2025",
+      description: [
+        "Developed interactive BI dashboards using internal BI tools, empowering stakeholders with real-time insights on operational KPIs to inform improvement initiatives.",
+        "Designed and implemented standardised reporting repositories to power BI dashboards, eliminating manual data extraction and integration and reducing reporting preparation by 12%, enabling faster access to business insights.",
+        "Developed automated data fetch calls in Python and pandas to extract data from target platforms via REST APIs, streamlining data retrieval and ensuring availability'.",
+        "Managed and delivered 5 projects per quarter, developing project plans, tracking progress, and maintaining median quality scores of 95% with ±5% standard deviation.",
+        "Gathered and documented project requirements from cross-functional stakeholders, iteratively refining deliverables based on quality assurance data and feedback.",
+        "Collaborated with internal and external teams to align on delivery standards, running weekly calibration sessions and presenting performance data."
+      ],
+      skills: ["REST APIs", "Python", "BI Dashboards", "Project Management", "Data Labelling", "Policy Alignment"]
+    }
+  ],
+  projects: [
+    {
+      id: "proj-1",
+      title: "Retail Analytics Data Warehouse",
+      subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
+      period: "Oct 2024",
+      githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
+      demoUrl: "https://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
+      tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
+      summary: "Designed and built a data warehouse in Snowflake to transform complex time-series, geographic, and demographic data into high-performance analytical datasets, using advanced data modelling and ETL with Python, dbt, and SQL queries.",
+      bullets: [
+        "Constructed optimized star-schema dimensional data models in Snowflake for high-frequency retail transactions.",
+        "Implemented dbt transformation models with built-in schema testing and complete data lineage.",
+        "Wrote Python and SQL ETL pipelines to automate data extraction, cleaning, and ingestion processes."
+      ]
+    }
+  ],
+  certifications: [
+    {
+      id: "cert-1",
+      name: "Data Engineer Professional Certificate",
+      issuer: "IBM",
+      date: "May – Oct 2025",
+      url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
+    }
+  ]
+};
+
+export function getPortfolioData(): PortfolioData {
+    if (typeof window !== "undefined") {
+        const params = new URLSearchParams(window.location.search);
+        const role = params.get("role");
+        if (role === "data" || role === "analyst" || role === "da" || role === "officer") {
+            return dataAnalystData
+        }
+    }
+    return riskAnalystData;
+}

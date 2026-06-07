@@ -7,26 +7,27 @@ import Home from "./pages/Home";
 import PortfolioPage from "./pages/PortfolioPage";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import { portfolioData } from "./data/portfolioData";
+import { getPortfolioData } from "./data/portfolioData";
 
 type Section = "home" | "portfolio" | "blog" | "contact";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<Section>("home");
+  const [portfolioData] = useState(() => getPortfolioData())
   const { personal } = portfolioData;
 
   const renderSection = () => {
     switch (activeSection) {
       case "home":
-        return <Home />;
+        return <Home data={portfolioData} />;
       case "portfolio":
         return <PortfolioPage />;
       case "blog":
         return <Blog />;
       case "contact":
-        return <Contact />;
+        return <Contact data={portfolioData} />;
       default:
-        return <Home />;
+        return <Home data={portfolioData} />;
     }
   };
 

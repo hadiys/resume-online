@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { portfolioData } from "../data/portfolioData";
+import { PortfolioData } from "../data/portfolioData";
 import { Mail, Phone, MapPin, Send, MessageSquare, Linkedin, Github } from "lucide-react";
 import { toast } from "sonner";
 
-export default function Contact() {
-  const { personal } = portfolioData;
+export interface ContactProps {
+    data: PortfolioData
+}
+
+export default function Contact({ data }: ContactProps) {
+  const { personal } = data;
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 

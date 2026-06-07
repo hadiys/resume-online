@@ -1,8 +1,13 @@
 import React from "react";
-import { portfolioData } from "../data/portfolioData";
+import { Briefcase, GraduationCap, Award, MapPin, Mail, Linkedin, Github } from "lucide-react";
+import { PortfolioData } from "../data/portfolioData";
 
-export default function Home() {
-  const { personal, experiences, certifications, skills } = portfolioData;
+interface HomeProps {
+    data: PortfolioData;
+}
+
+export default function Home({ data }: HomeProps) {
+  const { personal, experiences, certifications, skills } = data;
 
   return (
     <div className="space-y-20 relative">
