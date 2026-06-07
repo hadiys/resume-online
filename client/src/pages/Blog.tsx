@@ -8,37 +8,40 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
+  blogUrl: string;
   tags: string[];
 }
 
 const blogPosts: BlogPost[] = [
+//   {
+//     id: "post-1",
+//     title: "AI-Powered Platform Integrity: Automating Escalation Workflows at Scale",
+//     excerpt: "How modern agentic AI systems and LLMs can be integrated into high-volume platform safety operations to reduce human review overhead by up to 85% while maintaining exceptional precision.",
+//     date: "May 15, 2026",
+//     readTime: "6 min read",
+//     category: "AI & Platform Safety",
+//     blogURL: "",
+//     tags: ["Agentic AI", "LLMs", "Platform Safety", "Automation"]
+//   },
   {
     id: "post-1",
-    title: "AI-Powered Platform Integrity: Automating Escalation Workflows at Scale",
-    excerpt: "How modern agentic AI systems and LLMs can be integrated into high-volume platform safety operations to reduce human review overhead by up to 85% while maintaining exceptional precision.",
-    date: "May 15, 2026",
-    readTime: "6 min read",
-    category: "AI & Platform Safety",
-    tags: ["Agentic AI", "LLMs", "Platform Safety", "Automation"]
-  },
-  {
-    id: "post-2",
     title: "Building High-Performance Retail Data Warehouses in Snowflake with dbt",
     excerpt: "A deep dive into transforming complex, disjointed time-series and geographic transactional data into high-performance, analytics-ready star schemas using Snowflake and dbt.",
     date: "March 10, 2026",
     readTime: "8 min read",
     category: "Data Engineering",
+    blogUrl: "https://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
     tags: ["Snowflake", "dbt", "Data Modeling", "SQL"]
   },
-  {
-    id: "post-3",
-    title: "Navigating Crisis Enforcement: Designing Automated Pipelines Under Pressure",
-    excerpt: "Reflections and engineering best practices on deploying real-time automated policy enforcement pipelines during major geopolitical high-risk events to combat coordinated hate speech.",
-    date: "January 22, 2026",
-    readTime: "5 min read",
-    category: "Risk Operations",
-    tags: ["Crisis Enforcement", "Content Moderation", "Risk Mitigation"]
-  }
+//   {
+//     id: "post-3",
+//     title: "Navigating Crisis Enforcement: Designing Automated Pipelines Under Pressure",
+//     excerpt: "Reflections and engineering best practices on deploying real-time automated policy enforcement pipelines during major geopolitical high-risk events to combat coordinated hate speech.",
+//     date: "January 22, 2026",
+//     readTime: "5 min read",
+//     category: "Risk Operations",
+//     tags: ["Crisis Enforcement", "Content Moderation", "Risk Mitigation"]
+//   }
 ];
 
 export default function Blog() {
@@ -47,11 +50,11 @@ export default function Blog() {
       {/* Section Header */}
       <div className="space-y-4">
         <h2 className="text-3xl font-extrabold text-zinc-100 tracking-tight">
-          Writing & Insights
+          Recent Articles
         </h2>
-        <p className="text-zinc-400 max-w-2xl text-base leading-relaxed">
+        {/* <p className="text-zinc-400 max-w-2xl text-base leading-relaxed">
           Thoughts on building scalable automated enforcement systems, data engineering best practices, and the future of platform safety and integrity operations.
-        </p>
+        </p> */}
       </div>
 
       {/* Blog Grid */}
@@ -92,7 +95,7 @@ export default function Blog() {
               </div>
               
               <button className="flex items-center gap-1 text-xs font-bold text-blue-400 hover:text-blue-300 font-mono group-hover:translate-x-1 transition-transform">
-                Read Article
+                <a href={post.blogUrl}  target="_blank" rel="noopener noreferrer">Read Article</a>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

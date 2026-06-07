@@ -145,7 +145,7 @@ export const riskAnalystData: PortfolioData = {
       id: "proj-1",
       title: "Retail Analytics Data Warehouse",
       subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
-      period: "Oct 2024",
+      period: "Dec 2024",
       githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
       demoUrl: "https://towardsdev.comhttps://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
       tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
@@ -162,7 +162,7 @@ export const riskAnalystData: PortfolioData = {
       id: "cert-1",
       name: "Data Engineer Professional Certificate",
       issuer: "IBM",
-      date: "May – Oct 2025",
+      date: "Oct 2025",
       url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
     }
   ]
@@ -236,7 +236,7 @@ export const dataAnalystData: PortfolioData = {
       id: "proj-1",
       title: "Retail Analytics Data Warehouse",
       subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
-      period: "Oct 2024",
+      period: "Dec 2024",
       githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
       demoUrl: "https://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
       tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
@@ -253,7 +253,7 @@ export const dataAnalystData: PortfolioData = {
       id: "cert-1",
       name: "Data Engineer Professional Certificate",
       issuer: "IBM",
-      date: "May – Oct 2025",
+      date: "Oct 2025",
       url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
     }
   ]

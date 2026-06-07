@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { portfolioData, Project } from "../data/portfolioData";
+import { getPortfolioData, Project } from "../data/portfolioData";
 import ProjectModal from "../components/ProjectModal";
 import { Code, ExternalLink, ChevronRight, Github } from "lucide-react";
 
 export default function PortfolioPage() {
+  const [portfolioData] = useState(() => getPortfolioData())
   const { projects } = portfolioData;
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsOpen] = useState(false);
