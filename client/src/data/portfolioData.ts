@@ -261,7 +261,7 @@ export const dataAnalystData: PortfolioData = {
 
 export function getPortfolioData(): PortfolioData {
     if (typeof window !== "undefined") {
-        const params = new URLSearchParams(window.location.search);
+        const params = new window.URLSearchParams(window.location.search);
         const role = params.get("role");
         if (role === "14165") {
             return dataAnalystData
