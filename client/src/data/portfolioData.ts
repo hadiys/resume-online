@@ -263,7 +263,7 @@ export function getPortfolioData(): PortfolioData {
     if (typeof window !== "undefined") {
         const params = new URLSearchParams(window.location.search);
         const role = params.get("role");
-        if (role === "data" || role === "analyst" || role === "da" || role === "officer") {
+        if (role === "14165") {
             return dataAnalystData
         }
     }
