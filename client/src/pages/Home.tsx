@@ -1,5 +1,4 @@
 import React from "react";
-import { Briefcase, GraduationCap, Award, MapPin, Mail, Linkedin, Github } from "lucide-react";
 import { PortfolioData } from "../data/portfolioData";
 
 interface HomeProps {
@@ -72,7 +71,7 @@ export default function Home({ data }: HomeProps) {
           
           {/* Profile Summary - Slashes removed */}
           <div className="p-6 rounded-2xl bg-zinc-900/20 space-y-4">
-            <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest font-sans">
+            <h3 className="text-sm font-bold text-zinc-200 uppercase tracking-widest font-sans">
               Professional Profile
             </h3>
             <p className="text-sm text-zinc-400 leading-relaxed">
@@ -81,7 +80,7 @@ export default function Home({ data }: HomeProps) {
           </div>
 
           {/* Certifications */}
-          <div className="space-y-6">
+          <div className="space-y-1">
             <h2 className="text-3xl font-extrabold text-zinc-100 tracking-tight flex items-center gap-3">
               Certifications
             </h2>
@@ -116,7 +115,7 @@ export default function Home({ data }: HomeProps) {
             </div>
           </div>
           {/* Education */}
-          <div className="space-y-6">
+          <div className="space-y-1">
             <h2 className="text-3xl font-extrabold text-zinc-100 tracking-tight flex items-center gap-3">
               Education
             </h2>

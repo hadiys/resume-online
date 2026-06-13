@@ -62,22 +62,52 @@ export interface PortfolioData {
   education: Education[];
 }
 
-export const riskAnalystData: PortfolioData = {
-  personal: {
-    name: "Hadi Yaser",
-    title: "Risk & Integrity Analyst",
-    photoUrl: "images/hadi_profile.jpeg",
-    // photoUrl: "images/profile_photo.jpeg",
-    bgUrl: "images/dubai.webp",
-    email: "saleh.hadiyasser@hotmail.com",
-    phone: "+353 879 565 424",
-    location: "Dublin, IE (Currently searching for UAE-based roles)",
-    linkedin: "https://linkedin.com/in/hadiys",
-    profileSummary: "Results-driven Risk & Integrity Analyst with 5 years' experience in Platform Safety & Integrity Operations at Meta and TikTok. Proven track record in designing AI-powered automation pipelines that reduce manual effort by up to 85%, leading cross-regional fraud investigations uncovering systemic enforcement gaps, and delivering data-driven solutions at scale. Combines postgraduate computing education with IBM-certified data engineering expertise to translate complex integrity challenges into automated, scalable enforcement systems. Strong command of Python, SQL, and agentic AI workflows.",
-    punchyOneLiner: "Translating complex integrity challenges into automated, scalable enforcement systems.",
-    contactPrompt: "Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below."
-  },
-  skills: [
+const certifications = [
+    {
+        id: "cert-1",
+        name: "✅ Data Engineer Professional Certificate",
+        issuer: "IBM",
+        date: "Oct 2025",
+        url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
+    }
+]
+
+const education = [
+    {
+      id: "edu-1",
+      title: "Postgraduate Diploma in Computing",
+      institution: "Griffith College Dublin",
+      date: "2019 – 2020",
+      description: "🏆 First Class Honours"
+    },
+    {
+      id: "edu-2",
+      title: "BSc Hons. in Computer Science",
+      institution: "Griffith College Dublin",
+      date: "2014 – 2017",
+      description: "🎓 Second Class Honours"
+    }
+]
+
+const projects = [
+    {
+      id: "proj-1",
+      title: "Retail Analytics Data Warehouse",
+      subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
+      period: "Dec 2024",
+      githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
+      demoUrl: "https://towardsdev.comhttps://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
+      tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
+      summary: "Designed and built a data warehouse in Snowflake to transform complex time-series, geographic, and demographic data into high-performance analytical datasets, using advanced data modelling and ETL with Python, dbt, and SQL queries.",
+      bullets: [
+        "Constructed optimized star-schema dimensional data models in Snowflake for high-frequency retail transactions.",
+        "Implemented dbt transformation models with built-in schema testing and complete data lineage.",
+        "Wrote Python and SQL ETL pipelines to automate data extraction, cleaning, and ingestion processes."
+      ]
+    }
+]
+
+const skills = [
     {
       category: "Languages",
       items: [
@@ -88,15 +118,32 @@ export const riskAnalystData: PortfolioData = {
     {
       category: "Tools & Technologies",
       items: [
+          { name: "n8n", icon: "images/n8n.png" },
         { name: "Snowflake", icon: "images/snowflake.png" },
         { name: "dbt", icon: "images/dbt.webp" },
         { name: "Apache Airflow", icon: "images/airflow.png" }
       ]
     }
-  ],
+]
+
+
+export const riskAnalystData: PortfolioData = {
+  personal: {
+    name: "Hadi Yaser",
+    title: "Risk & Integrity Analyst",
+    photoUrl: "images/hadi_profile.jpeg",
+    bgUrl: "images/dubai.webp",
+    email: "saleh.hadiyasser@hotmail.com",
+    phone: "+353 879 565 424",
+    location: "Dublin, IE (Currently searching for UAE-based roles)",
+    linkedin: "https://linkedin.com/in/hadiys",
+    profileSummary: "Results-driven Risk & Integrity Analyst with 5 years' experience in Platform Safety & Integrity Operations at Meta and TikTok. Proven track record in designing AI-powered automation pipelines that reduce manual effort by up to 85%, leading cross-regional fraud investigations uncovering systemic enforcement gaps, and delivering data-driven solutions at scale. Combines postgraduate computing education with IBM-certified data engineering expertise to translate complex integrity challenges into automated, scalable enforcement systems. Strong command of Python, SQL, and agentic AI workflows.",
+    punchyOneLiner: "Translating complex integrity challenges into automated, scalable enforcement systems.",
+    contactPrompt: "Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below."
+  },
   experiences: [
-    {
-      id: "exp-1",
+      {
+          id: "exp-1",
       role: "Risk & Integrity Analyst (Gulf Market)",
       company: "Meta",
       location: "Dublin, IE",
@@ -151,41 +198,10 @@ export const riskAnalystData: PortfolioData = {
       skills: ["Quality Sampling", "Arabic Content Enforcement", "Metric Reporting", "Trend Analysis"]
     }
   ],
-  projects: [
-    {
-      id: "proj-1",
-      title: "Retail Analytics Data Warehouse",
-      subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
-      period: "Dec 2024",
-      githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
-      demoUrl: "https://towardsdev.comhttps://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
-      tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
-      summary: "Designed and built a data warehouse in Snowflake to transform complex time-series, geographic, and demographic data into high-performance analytical datasets, using advanced data modelling and ETL with Python, dbt, and SQL queries.",
-      bullets: [
-        "Constructed optimized star-schema dimensional data models in Snowflake for high-frequency retail transactions.",
-        "Implemented dbt transformation models with built-in schema testing and complete data lineage.",
-        "Wrote Python and SQL ETL pipelines to automate data extraction, cleaning, and ingestion processes."
-      ]
-    }
-  ],
-  certifications: [
-    {
-      id: "cert-1",
-      name: "Data Engineer Professional Certificate",
-      issuer: "IBM",
-      date: "Oct 2025",
-      url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
-    }
-  ],
-  education: [
-    {
-      id: "edu-1",
-      title: "Postgraduate Diploma in Computing",
-      institution: "Griffith College Dublin",
-      date: "2019 – 2020",
-      description: "First Class Honours"
-    }
-  ]
+  skills,
+  projects,
+  certifications,
+  education
 };
 
 export const dataAnalystData: PortfolioData = {
@@ -203,23 +219,6 @@ export const dataAnalystData: PortfolioData = {
     punchyOneLiner: "Translating operational challenges into data-driven solutions.",
     contactPrompt: "Have a role to discuss, a technical project collaboration in mind, or just want to chat about automated risk operations? Drop a message below."
   },
-  skills: [
-    {
-      category: "Languages",
-      items: [
-        { name: "Python", icon: "images/python.png" },
-        { name: "SQL", icon: "images/sql.png" }
-      ]
-    },
-    {
-      category: "Tools & Technologies",
-      items: [
-        { name: "Snowflake", icon: "images/snowflake.png" },
-        { name: "dbt", icon: "images/dbt.webp" },
-        { name: "Apache Airflow", icon: "images/airflow.png" }
-      ]
-    }
-  ],
   experiences: [
     {
       id: "exp-1",
@@ -252,41 +251,10 @@ export const dataAnalystData: PortfolioData = {
       skills: ["REST APIs", "Python", "BI Dashboards", "Project Management", "Data Labelling", "Policy Alignment"]
     }
   ],
-  projects: [
-    {
-      id: "proj-1",
-      title: "Retail Analytics Data Warehouse",
-      subtitle: "Snowflake, dbt, Python & SQL Data Warehouse",
-      period: "Dec 2024",
-      githubUrl: "https://github.com/hadiys/DataWarehouse-RetailMall",
-      demoUrl: "https://medium.com/@saleh.hadiyasser/building-a-scalable-mall-analytics-data-mart-a-data-engineering-journey-07ef3a0ed149",
-      tags: ["Snowflake", "dbt", "Python", "SQL", "Data Modeling"],
-      summary: "Designed and built a data warehouse in Snowflake to transform complex time-series, geographic, and demographic data into high-performance analytical datasets, using advanced data modelling and ETL with Python, dbt, and SQL queries.",
-      bullets: [
-        "Constructed optimized star-schema dimensional data models in Snowflake for high-frequency retail transactions.",
-        "Implemented dbt transformation models with built-in schema testing and complete data lineage.",
-        "Wrote Python and SQL ETL pipelines to automate data extraction, cleaning, and ingestion processes."
-      ]
-    }
-  ],
-  certifications: [
-    {
-      id: "cert-1",
-      name: "Data Engineer Professional Certificate",
-      issuer: "IBM",
-      date: "Oct 2025",
-      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/R95BGQP18895"
-    }
-  ],
-  education: [
-    {
-      id: "edu-1",
-      title: "Postgraduate Diploma in Computing",
-      institution: "Griffith College Dublin",
-      date: "2019 – 2020",
-      description: "First Class Honours"
-    }
-  ]
+  skills,
+  projects,
+  certifications,
+  education
 };
 
 export function getPortfolioData(): PortfolioData | null {
