@@ -7,7 +7,7 @@ interface HomeProps {
 }
 
 export default function Home({ data }: HomeProps) {
-  const { personal, experiences, certifications, skills } = data;
+  const { personal, experiences, certifications, skills, education } = data;
 
   return (
     <div className="space-y-20 relative">
@@ -111,6 +111,33 @@ export default function Home({ data }: HomeProps) {
                       Verify Credential
                     </a>
                   )}
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Education */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-extrabold text-zinc-100 tracking-tight flex items-center gap-3">
+              Education
+            </h2>
+
+            <div className="space-y-4">
+              {education.map((edu) => (
+                <div 
+                  key={edu.id}
+                  className="p-5 rounded-2xl bg-zinc-900/10 flex flex-col justify-between gap-4 hover:bg-zinc-900/20 transition-all"
+                >
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-zinc-200 leading-snug">
+                      {edu.title}
+                    </h4>
+                    <h4 className="text-xs text-zinc-200 leading-snug">
+                      {edu.description}
+                    </h4>
+                    <p className="text-xs text-zinc-500 font-sans">
+                      {edu.institution} • {edu.date}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

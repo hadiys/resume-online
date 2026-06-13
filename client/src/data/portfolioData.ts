@@ -30,6 +30,14 @@ export interface Certification {
   url?: string;
 }
 
+export interface Education {
+  id: string;
+  title: string;
+  institution: string;
+  date: string;
+  description: string;
+}
+
 export interface PortfolioData {
   personal: {
     name: string;
@@ -51,6 +59,7 @@ export interface PortfolioData {
   experiences: Experience[];
   projects: Project[];
   certifications: Certification[];
+  education: Education[];
 }
 
 export const riskAnalystData: PortfolioData = {
@@ -167,6 +176,15 @@ export const riskAnalystData: PortfolioData = {
       date: "Oct 2025",
       url: "https://coursera.org/share/21d4a4064a74120e9282a7ece3b42a"
     }
+  ],
+  education: [
+    {
+      id: "edu-1",
+      title: "Postgraduate Diploma in Computing",
+      institution: "Griffith College Dublin",
+      date: "2019 – 2020",
+      description: "First Class Honours"
+    }
   ]
 };
 
@@ -258,6 +276,15 @@ export const dataAnalystData: PortfolioData = {
       issuer: "IBM",
       date: "Oct 2025",
       url: "https://www.coursera.org/account/accomplishments/specialization/certificate/R95BGQP18895"
+    }
+  ],
+  education: [
+    {
+      id: "edu-1",
+      title: "Postgraduate Diploma in Computing",
+      institution: "Griffith College Dublin",
+      date: "2019 – 2020",
+      description: "First Class Honours"
     }
   ]
 };
